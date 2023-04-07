@@ -46,16 +46,16 @@ public class Operator {
                 this.RecordList.ShowAllRecords();
                 break;
             case RecordOption.FireService:
-                Console.WriteLine("todo");
+                this.RecordList.ShowFireRecords();
                 break;
             case RecordOption.MedicalService:
-                Console.WriteLine("todo");
+                this.RecordList.ShowMedicalRecords();
                 break;
             case RecordOption.PoliceServiceForMale:
-                Console.WriteLine("todo");
+                this.RecordList.ShowPoliceForMaleRecords();
                 break;
             case RecordOption.PoliceServiceForFemale:
-                Console.WriteLine("todo");
+                this.RecordList.ShowPoliceForFemaleRecords();
                 break;
             default:
                 throw new InvalidOperationException("Invalid option.");
