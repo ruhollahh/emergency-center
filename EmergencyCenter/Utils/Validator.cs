@@ -4,21 +4,11 @@ namespace EmergencyCenter.Utils;
 
 public static class Validator
 {
-    public static bool IsNumeric(string value)
-    {
-        if (string.IsNullOrWhiteSpace(value) || int.TryParse(value, out _))
-        {
-            throw new InvalidOperationException("Age must be a number.");
-        }
-
-        return true;
-    }
-    
     public static bool IsNotEmpty(string value)
     {
         if (string.IsNullOrWhiteSpace(value))
         {
-            throw new InvalidOperationException("Name can't be empty or consist only of white-spaces.");
+            throw new InvalidOperationException("This field can't be empty.");
         }
 
         return true;
