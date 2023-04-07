@@ -63,7 +63,7 @@ public class RecordList
     public void ShowPoliceForFemaleRecords()
     {
         List<Record> filteredRecords = AllRecords.FindAll(record => record.Service == ServiceOption.Theft && record.User.Gender == Gender.Female);
-        foreach (string formattedRecord in FormattedRecord(AllRecords))
+        foreach (string formattedRecord in FormattedRecord(filteredRecords))
         {
             Console.WriteLine(formattedRecord);
         }
