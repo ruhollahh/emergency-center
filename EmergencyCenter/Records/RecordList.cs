@@ -21,7 +21,8 @@ public class RecordList
     {
         foreach (var record in records)
         {
-            yield return $"{record.User.NationalCode} -> {record.Service}";
+            var title = record.User.Gender == Gender.Male ? "Mr." : "Ms.";
+            yield return $"{title} {record.User.FullName} with the national code of {record.User.NationalCode} requested {record.Service} service.";
         }
     }
     

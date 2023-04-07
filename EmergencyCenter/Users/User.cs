@@ -4,7 +4,7 @@ public class User
 {
     private string FirstName { get; }
     private string LastName { get; }
-    private string FullName => $"{FirstName} {LastName}";
+    public string FullName => $"{FirstName} {LastName}";
     public Gender Gender { get; }
     public string NationalCode { get; }
     private string Address { get; }
